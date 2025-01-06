@@ -1,11 +1,21 @@
-from translate import Translator
-import functions.Get_Sub_bilibili 
-translator= Translator(from_lang="zh-chi",to_lang="vi")
-subVit=[]
-for sub in functions.Get_Sub_bilibili.slice_object:
+import json
+# Read original JSON
+with open("C:/Users/pc/toolPy/functions/subtitles.json", 'r', encoding='utf-8') as file:
+    data = json.load(file)
+
+# Read Vietnamese translations
+with open("C:/Users/pc/toolPy/result/vietSub.txt", 'r', encoding='utf-8') as file:
+    lines = [line.strip() for line in file.readlines() if line.strip()]
+# Update content for each subtitle entry
+ # Replace content in each subtitle entry with Vietnamese lines
+    for index, subtitle in enumerate(data["body"]):
+        if index < len(lines):
+            subtitle["content"] = lines[index]
+with open("C:/Users/pc/toolPy/functions/subtitlesViet.json", 'w', encoding='utf-8') as file:
+        json.dump(data, file, ensure_ascii=False, indent=2)        
+
+# # Write updated data to new JSON file
+# with open("C:/Users/pc/toolPy/functions/subtitlesViet.json", 'w', encoding='utf-8') as file:
+#     json.dump(data, file, ensure_ascii=False, indent=2)
     
-    
-    translation = translator.translate(sub)
-    subVit.append(translation)
-    
-print(subVit)
+print("Translation completed successfully!")
