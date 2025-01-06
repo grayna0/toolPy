@@ -1,0 +1,900 @@
+{
+    "font_size": 0.4,
+    "font_color": "#FFFFFF",
+    "background_alpha": 0.5,
+    "background_color": "#9C27B0",
+    "Stroke": "none",
+    "type": "AIsubtitle",
+    "lang": "zh",
+    "version": "v1.7.0.4",
+    "body": [
+      {
+        "from": 0.12,
+        "to": 0.82,
+        "sid": 1,
+        "location": 2,
+        "content": "南明之法",
+        "music": 0.0
+      },
+      {
+        "from": 0.82,
+        "to": 1.64,
+        "sid": 2,
+        "location": 2,
+        "content": "离火之精",
+        "music": 0.0
+      },
+      {
+        "from": 1.64,
+        "to": 2.74,
+        "sid": 3,
+        "location": 2,
+        "content": "聚火成术",
+        "music": 0.0
+      },
+      {
+        "from": 2.74,
+        "to": 5.66,
+        "sid": 4,
+        "location": 2,
+        "content": "盖那红尘送葬者扛人",
+        "music": 0.0
+      },
+      {
+        "from": 5.66,
+        "to": 6.88,
+        "sid": 5,
+        "location": 2,
+        "content": "开局救长生",
+        "music": 0.0
+      },
+      {
+        "from": 6.88,
+        "to": 8.08,
+        "sid": 6,
+        "location": 2,
+        "content": "送葬就变强",
+        "music": 0.0
+      },
+      {
+        "from": 8.08,
+        "to": 9.42,
+        "sid": 7,
+        "location": 2,
+        "content": "开局一本藏尸路",
+        "music": 0.0
+      },
+      {
+        "from": 9.42,
+        "to": 10.6,
+        "sid": 8,
+        "location": 2,
+        "content": "一人一狗修仙路",
+        "music": 0.0
+      },
+      {
+        "from": 10.6,
+        "to": 13.05,
+        "sid": 9,
+        "location": 2,
+        "content": "他是行走世间的送葬者",
+        "music": 0.0
+      },
+      {
+        "from": 13.219,
+        "to": 16.739,
+        "sid": 10,
+        "location": 2,
+        "content": "不过像花苦说得尽快",
+        "music": 0.9999996666667778
+      },
+      {
+        "from": 16.739,
+        "to": 19.59,
+        "sid": 11,
+        "location": 2,
+        "content": "终身难采",
+        "music": 0.31372545943868085
+      },
+      {
+        "from": 19.99,
+        "to": 21.25,
+        "sid": 12,
+        "location": 2,
+        "content": "公公公老莫",
+        "music": 0.0
+      },
+      {
+        "from": 21.25,
+        "to": 22.83,
+        "sid": 13,
+        "location": 2,
+        "content": "看来离飞仙谷不远了",
+        "music": 0.0
+      },
+      {
+        "from": 22.83,
+        "to": 25.86,
+        "sid": 14,
+        "location": 2,
+        "content": "汪汪汪哈哈",
+        "music": 0.0
+      },
+      {
+        "from": 25.86,
+        "to": 27.38,
+        "sid": 15,
+        "location": 2,
+        "content": "四周的灵气浓郁",
+        "music": 0.0
+      },
+      {
+        "from": 27.38,
+        "to": 29.54,
+        "sid": 16,
+        "location": 2,
+        "content": "偶尔天空中会划过一道道红光",
+        "music": 0.0
+      },
+      {
+        "from": 29.54,
+        "to": 31.98,
+        "sid": 17,
+        "location": 2,
+        "content": "显然是修仙者赶路经过",
+        "music": 0.0
+      },
+      {
+        "from": 35.4,
+        "to": 38.54,
+        "sid": 18,
+        "location": 2,
+        "content": "啊啊太好了",
+        "music": 0.0
+      },
+      {
+        "from": 38.54,
+        "to": 40.02,
+        "sid": 19,
+        "location": 2,
+        "content": "总算碰见同道了",
+        "music": 0.0
+      },
+      {
+        "from": 40.02,
+        "to": 41.16,
+        "sid": 20,
+        "location": 2,
+        "content": "这一路没人说话",
+        "music": 0.0
+      },
+      {
+        "from": 41.16,
+        "to": 42.55,
+        "sid": 21,
+        "location": 2,
+        "content": "闷死我了",
+        "music": 0.0
+      },
+      {
+        "from": 42.83,
+        "to": 44.91,
+        "sid": 22,
+        "location": 2,
+        "content": "道友你也是去松云芳是吗",
+        "music": 0.0
+      },
+      {
+        "from": 44.91,
+        "to": 47.41,
+        "sid": 23,
+        "location": 2,
+        "content": "过几个月就是5年一度的飞仙大会了",
+        "music": 0.0
+      },
+      {
+        "from": 47.41,
+        "to": 48.57,
+        "sid": 24,
+        "location": 2,
+        "content": "这家伙是个话痨",
+        "music": 0.0
+      },
+      {
+        "from": 48.57,
+        "to": 49.73,
+        "sid": 25,
+        "location": 2,
+        "content": "也不等唐人搭话",
+        "music": 0.0
+      },
+      {
+        "from": 49.73,
+        "to": 51.47,
+        "sid": 26,
+        "location": 2,
+        "content": "自顾自的打开了话匣子",
+        "music": 0.0
+      },
+      {
+        "from": 51.47,
+        "to": 53.09,
+        "sid": 27,
+        "location": 2,
+        "content": "道友我叫万晓峰",
+        "music": 0.0
+      },
+      {
+        "from": 53.09,
+        "to": 54.73,
+        "sid": 28,
+        "location": 2,
+        "content": "不知道友姓甚名谁",
+        "music": 0.0
+      },
+      {
+        "from": 54.73,
+        "to": 58.51,
+        "sid": 29,
+        "location": 2,
+        "content": "蔡坤想必是太平岛蔡家吧",
+        "music": 0.0
+      },
+      {
+        "from": 59.47,
+        "to": 60.67,
+        "sid": 30,
+        "location": 2,
+        "content": "坤坤兄弟啊",
+        "music": 0.0
+      },
+      {
+        "from": 60.67,
+        "to": 62.53,
+        "sid": 31,
+        "location": 2,
+        "content": "你在吃什么啊",
+        "music": 0.0
+      },
+      {
+        "from": 62.53,
+        "to": 63.67,
+        "sid": 32,
+        "location": 2,
+        "content": "唐人愕然",
+        "music": 0.0
+      },
+      {
+        "from": 63.67,
+        "to": 64.13,
+        "sid": 33,
+        "location": 2,
+        "content": "没想到",
+        "music": 0.0
+      },
+      {
+        "from": 64.13,
+        "to": 65.29,
+        "sid": 34,
+        "location": 2,
+        "content": "这家伙真是自来熟",
+        "music": 0.0
+      },
+      {
+        "from": 65.29,
+        "to": 67.37,
+        "sid": 35,
+        "location": 2,
+        "content": "唐人分了一腿烤鸡给万小峰",
+        "music": 0.0
+      },
+      {
+        "from": 67.37,
+        "to": 68.63,
+        "sid": 36,
+        "location": 2,
+        "content": "万晓峰也不客气",
+        "music": 0.0
+      },
+      {
+        "from": 68.63,
+        "to": 69.77,
+        "sid": 37,
+        "location": 2,
+        "content": "结果就吃了起来",
+        "music": 0.0
+      },
+      {
+        "from": 69.77,
+        "to": 71.88,
+        "sid": 38,
+        "location": 2,
+        "content": "丝毫不怕唐人下毒害他",
+        "music": 0.0
+      },
+      {
+        "from": 74.26,
+        "to": 74.98,
+        "sid": 39,
+        "location": 2,
+        "content": "万兄弟",
+        "music": 0.0
+      },
+      {
+        "from": 74.98,
+        "to": 76.38,
+        "sid": 40,
+        "location": 2,
+        "content": "我一向在族中苦修",
+        "music": 0.0
+      },
+      {
+        "from": 76.38,
+        "to": 78.54,
+        "sid": 41,
+        "location": 2,
+        "content": "对修仙界的事情了解不多",
+        "music": 0.0
+      },
+      {
+        "from": 78.54,
+        "to": 80.4,
+        "sid": 42,
+        "location": 2,
+        "content": "你能否给我讲上一讲",
+        "music": 0.0
+      },
+      {
+        "from": 80.4,
+        "to": 82.76,
+        "sid": 43,
+        "location": 2,
+        "content": "我万晓峰可是号称万事通坤",
+        "music": 0.0
+      },
+      {
+        "from": 82.76,
+        "to": 83.24,
+        "sid": 44,
+        "location": 2,
+        "content": "坤兄弟",
+        "music": 0.0
+      },
+      {
+        "from": 83.24,
+        "to": 84.16,
+        "sid": 45,
+        "location": 2,
+        "content": "你问对人了",
+        "music": 0.0
+      },
+      {
+        "from": 84.16,
+        "to": 85.0,
+        "sid": 46,
+        "location": 2,
+        "content": "三门大离国",
+        "music": 0.0
+      },
+      {
+        "from": 85.0,
+        "to": 86.6,
+        "sid": 47,
+        "location": 2,
+        "content": "修仙界一共有几大势力",
+        "music": 0.0
+      },
+      {
+        "from": 86.6,
+        "to": 87.52,
+        "sid": 48,
+        "location": 2,
+        "content": "分别是六派",
+        "music": 0.0
+      },
+      {
+        "from": 87.52,
+        "to": 88.44,
+        "sid": 49,
+        "location": 2,
+        "content": "1×3大家",
+        "music": 0.0
+      },
+      {
+        "from": 88.44,
+        "to": 89.89,
+        "sid": 50,
+        "location": 2,
+        "content": "六派是太乙剑宗",
+        "music": 0.0
+      },
+      {
+        "from": 89.89,
+        "to": 90.73,
+        "sid": 51,
+        "location": 2,
+        "content": "素女派",
+        "music": 0.0
+      },
+      {
+        "from": 90.73,
+        "to": 91.59,
+        "sid": 52,
+        "location": 2,
+        "content": "妙丹阁",
+        "music": 0.0
+      },
+      {
+        "from": 91.59,
+        "to": 92.43,
+        "sid": 53,
+        "location": 2,
+        "content": "天宫门",
+        "music": 0.0
+      },
+      {
+        "from": 92.43,
+        "to": 96.08,
+        "sid": 54,
+        "location": 2,
+        "content": "雷阳综合大禅寺驿城指的湿壁洛城碧落城",
+        "music": 0.0
+      },
+      {
+        "from": 96.08,
+        "to": 97.46,
+        "sid": 55,
+        "location": 2,
+        "content": "处于10万大山深处",
+        "music": 0.0
+      },
+      {
+        "from": 97.46,
+        "to": 99.12,
+        "sid": 56,
+        "location": 2,
+        "content": "乃是唯一一个元婴散修",
+        "music": 0.0
+      },
+      {
+        "from": 99.12,
+        "to": 101.15,
+        "sid": 57,
+        "location": 2,
+        "content": "毕洛老祖建立的超级城池",
+        "music": 0.0
+      },
+      {
+        "from": 101.15,
+        "to": 102.99,
+        "sid": 58,
+        "location": 2,
+        "content": "三大家是指凌家公",
+        "music": 0.0
+      },
+      {
+        "from": 102.99,
+        "to": 104.91,
+        "sid": 59,
+        "location": 2,
+        "content": "输家和慕容家",
+        "music": 0.0
+      },
+      {
+        "from": 106.62,
+        "to": 108.7,
+        "sid": 60,
+        "location": 2,
+        "content": "那咱们这次去的松云方式",
+        "music": 0.0
+      },
+      {
+        "from": 108.7,
+        "to": 110.82,
+        "sid": 61,
+        "location": 2,
+        "content": "不知道是哪个势力所属呢",
+        "music": 0.0
+      },
+      {
+        "from": 110.82,
+        "to": 113.9,
+        "sid": 62,
+        "location": 2,
+        "content": "松云芳是原本是个大师利收徒的一处山谷",
+        "music": 0.0
+      },
+      {
+        "from": 113.9,
+        "to": 115.54,
+        "sid": 63,
+        "location": 2,
+        "content": "因为飞仙大会的原因",
+        "music": 0.0
+      },
+      {
+        "from": 115.54,
+        "to": 116.86,
+        "sid": 64,
+        "location": 2,
+        "content": "被称作飞仙谷",
+        "music": 0.0
+      },
+      {
+        "from": 116.86,
+        "to": 118.87,
+        "sid": 65,
+        "location": 2,
+        "content": "后来自发的聚集了许多散修",
+        "music": 0.0
+      },
+      {
+        "from": 118.87,
+        "to": 120.63,
+        "sid": 66,
+        "location": 2,
+        "content": "形成了一处小型的方式",
+        "music": 0.0
+      },
+      {
+        "from": 120.63,
+        "to": 122.979,
+        "sid": 67,
+        "location": 2,
+        "content": "这处方式由毕洛城派人管辖",
+        "music": 0.0
+      },
+      {
+        "from": 122.979,
+        "to": 125.199,
+        "sid": 68,
+        "location": 2,
+        "content": "大多数时候都万晓峰在说",
+        "music": 0.0
+      },
+      {
+        "from": 125.199,
+        "to": 127.819,
+        "sid": 69,
+        "location": 2,
+        "content": "唐人在听小半天后",
+        "music": 0.0
+      },
+      {
+        "from": 129.599,
+        "to": 130.319,
+        "sid": 70,
+        "location": 2,
+        "content": "万兄弟",
+        "music": 0.0
+      },
+      {
+        "from": 130.319,
+        "to": 132.24,
+        "sid": 71,
+        "location": 2,
+        "content": "不知道你平日里喜欢什么",
+        "music": 0.0
+      },
+      {
+        "from": 132.24,
+        "to": 133.54,
+        "sid": 72,
+        "location": 2,
+        "content": "喜欢的可多了",
+        "music": 0.0
+      },
+      {
+        "from": 133.54,
+        "to": 135.1,
+        "sid": 73,
+        "location": 2,
+        "content": "美食游山玩水",
+        "music": 0.0
+      },
+      {
+        "from": 135.1,
+        "to": 136.78,
+        "sid": 74,
+        "location": 2,
+        "content": "特别喜欢听奇闻异事",
+        "music": 0.0
+      },
+      {
+        "from": 136.78,
+        "to": 138.76,
+        "sid": 75,
+        "location": 2,
+        "content": "可惜家里长辈都不让做这些",
+        "music": 0.0
+      },
+      {
+        "from": 138.76,
+        "to": 139.72,
+        "sid": 76,
+        "location": 2,
+        "content": "坤坤兄弟",
+        "music": 0.0
+      },
+      {
+        "from": 139.72,
+        "to": 141.31,
+        "sid": 77,
+        "location": 2,
+        "content": "你呢有什么喜好",
+        "music": 0.0
+      },
+      {
+        "from": 141.31,
+        "to": 143.55,
+        "sid": 78,
+        "location": 2,
+        "content": "喜欢给人送葬哦",
+        "music": 0.0
+      },
+      {
+        "from": 143.55,
+        "to": 145.63,
+        "sid": 79,
+        "location": 2,
+        "content": "万兄弟哪天要是陨落了",
+        "music": 0.0
+      },
+      {
+        "from": 145.63,
+        "to": 147.77,
+        "sid": 80,
+        "location": 2,
+        "content": "我可以给兄弟找个风水宝地",
+        "music": 0.0
+      },
+      {
+        "from": 147.77,
+        "to": 149.25,
+        "sid": 81,
+        "location": 2,
+        "content": "凡是一条龙服务",
+        "music": 0.0
+      },
+      {
+        "from": 150.29,
+        "to": 152.39,
+        "sid": 82,
+        "location": 2,
+        "content": "坤坤兄弟这爱好真有意思",
+        "music": 0.0
+      },
+      {
+        "from": 152.39,
+        "to": 153.17,
+        "sid": 83,
+        "location": 2,
+        "content": "等我死了",
+        "music": 0.0
+      },
+      {
+        "from": 153.17,
+        "to": 155.71,
+        "sid": 84,
+        "location": 2,
+        "content": "我一定请你给我找块好地方送葬",
+        "music": 0.0
+      },
+      {
+        "from": 155.71,
+        "to": 157.37,
+        "sid": 85,
+        "location": 2,
+        "content": "我看这里就挺不错",
+        "music": 0.0
+      },
+      {
+        "from": 157.37,
+        "to": 161.44,
+        "sid": 86,
+        "location": 2,
+        "content": "我看这里就是一个不错的葬身之所啊",
+        "music": 0.0
+      },
+      {
+        "from": 161.44,
+        "to": 162.66,
+        "sid": 87,
+        "location": 2,
+        "content": "坤坤兄弟",
+        "music": 0.0
+      },
+      {
+        "from": 162.66,
+        "to": 166.98,
+        "sid": 88,
+        "location": 2,
+        "content": "你你",
+        "music": 0.2608695368620042
+      },
+      {
+        "from": 169.68,
+        "to": 170.54,
+        "sid": 89,
+        "location": 2,
+        "content": "出来吧",
+        "music": 0.0
+      },
+      {
+        "from": 170.54,
+        "to": 172.8,
+        "sid": 90,
+        "location": 2,
+        "content": "难道要我去请你出来",
+        "music": 0.0
+      },
+      {
+        "from": 173.33,
+        "to": 176.269,
+        "sid": 91,
+        "location": 2,
+        "content": "小子我的黄土衣可以收敛气息",
+        "music": 0.0
+      },
+      {
+        "from": 176.269,
+        "to": 177.649,
+        "sid": 92,
+        "location": 2,
+        "content": "与土石融为一体",
+        "music": 0.0
+      },
+      {
+        "from": 177.649,
+        "to": 179.769,
+        "sid": 93,
+        "location": 2,
+        "content": "你是怎么看穿我的伪装的",
+        "music": 0.0
+      },
+      {
+        "from": 182.26,
+        "to": 183.92,
+        "sid": 94,
+        "location": 2,
+        "content": "万晓峰一直隐藏的很好",
+        "music": 0.0
+      },
+      {
+        "from": 183.92,
+        "to": 185.26,
+        "sid": 95,
+        "location": 2,
+        "content": "没露出半点破绽",
+        "music": 0.0
+      },
+      {
+        "from": 185.26,
+        "to": 186.58,
+        "sid": 96,
+        "location": 2,
+        "content": "但到这峡谷的时候",
+        "music": 0.0
+      },
+      {
+        "from": 186.58,
+        "to": 187.84,
+        "sid": 97,
+        "location": 2,
+        "content": "他露出了一丝杀意",
+        "music": 0.0
+      },
+      {
+        "from": 187.84,
+        "to": 189.78,
+        "sid": 98,
+        "location": 2,
+        "content": "可惜唐人经历过神变境",
+        "music": 0.0
+      },
+      {
+        "from": 189.78,
+        "to": 190.64,
+        "sid": 99,
+        "location": 2,
+        "content": "六感通灵",
+        "music": 0.0
+      },
+      {
+        "from": 190.64,
+        "to": 191.92,
+        "sid": 100,
+        "location": 2,
+        "content": "对沙溢最为敏感",
+        "music": 0.0
+      },
+      {
+        "from": 191.92,
+        "to": 193.54,
+        "sid": 101,
+        "location": 2,
+        "content": "而且他又是三阶风水师",
+        "music": 0.0
+      },
+      {
+        "from": 193.54,
+        "to": 195.04,
+        "sid": 102,
+        "location": 2,
+        "content": "神魂经过地气淬炼",
+        "music": 0.0
+      },
+      {
+        "from": 195.04,
+        "to": 196.84,
+        "sid": 103,
+        "location": 2,
+        "content": "比一般人强大",
+        "music": 0.0
+      },
+      {
+        "from": 198.74,
+        "to": 200.88,
+        "sid": 104,
+        "location": 2,
+        "content": "小子你敢杀我弟弟",
+        "music": 0.0
+      },
+      {
+        "from": 200.88,
+        "to": 202.52,
+        "sid": 105,
+        "location": 2,
+        "content": "我要把你搜魂炼魄",
+        "music": 0.0
+      },
+      {
+        "from": 202.52,
+        "to": 204.18,
+        "sid": 106,
+        "location": 2,
+        "content": "我劝你束手就擒",
+        "music": 0.0
+      },
+      {
+        "from": 204.18,
+        "to": 205.63,
+        "sid": 107,
+        "location": 2,
+        "content": "少受点苦头",
+        "music": 0.0
+      },
+      {
+        "from": 205.63,
+        "to": 206.93,
+        "sid": 108,
+        "location": 2,
+        "content": "我也有一个建议",
+        "music": 0.0
+      },
+      {
+        "from": 206.93,
+        "to": 208.81,
+        "sid": 109,
+        "location": 2,
+        "content": "不如你现在立马自杀",
+        "music": 0.0
+      },
+      {
+        "from": 208.81,
+        "to": 210.11,
+        "sid": 110,
+        "location": 2,
+        "content": "我保证替你送葬",
+        "music": 0.0
+      },
+      {
+        "from": 210.11,
+        "to": 211.86,
+        "sid": 111,
+        "location": 2,
+        "content": "收尸猖狂",
+        "music": 0.0
+      }
+    ]
+  }
