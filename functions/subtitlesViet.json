@@ -13,7 +13,7 @@
       "to": 0.82,
       "sid": 1,
       "location": 2,
-      "content": "Pháp Nam Minh",
+      "content": "Pháp Nam Minh.",
       "music": 0.0
     },
     {
@@ -21,7 +21,7 @@
       "to": 1.64,
       "sid": 2,
       "location": 2,
-      "content": "Ly Hỏa Chi Tinh",
+      "content": "Tinh hoa ly hỏa.",
       "music": 0.0
     },
     {
@@ -29,7 +29,7 @@
       "to": 2.74,
       "sid": 3,
       "location": 2,
-      "content": "Tụ Hỏa Thành Thuật",
+      "content": "Tụ hỏa thành thuật.",
       "music": 0.0
     },
     {
@@ -37,7 +37,7 @@
       "to": 5.66,
       "sid": 4,
       "location": 2,
-      "content": "Gánh quan tài tiễn đưa hồng trần",
+      "content": "Người đưa tang chốn hồng trần gánh người.",
       "music": 0.0
     },
     {
@@ -45,7 +45,7 @@
       "to": 6.88,
       "sid": 5,
       "location": 2,
-      "content": "Mở đầu cứu Trường Sinh",
+      "content": "Mở đầu là cứu Trường Sinh.",
       "music": 0.0
     },
     {
@@ -53,7 +53,7 @@
       "to": 8.08,
       "sid": 6,
       "location": 2,
-      "content": "Tiễn đưa để trở nên mạnh mẽ hơn",
+      "content": "Đưa tang là mạnh lên.",
       "music": 0.0
     },
     {
@@ -61,7 +61,7 @@
       "to": 9.42,
       "sid": 7,
       "location": 2,
-      "content": "Mở đầu với một cuốn \"Tàng Thi Lộ\"",
+      "content": "Khởi đầu với một cuốn sách Tàng Thi Lộ.",
       "music": 0.0
     },
     {
@@ -69,7 +69,7 @@
       "to": 10.6,
       "sid": 8,
       "location": 2,
-      "content": "Một người, một chó trên con đường tu tiên",
+      "content": "Một người một chó, con đường tu tiên.",
       "music": 0.0
     },
     {
@@ -77,7 +77,7 @@
       "to": 13.05,
       "sid": 9,
       "location": 2,
-      "content": "Hắn là kẻ đưa tang đi khắp thế gian",
+      "content": "Hắn là kẻ đưa tang đi khắp nhân gian.",
       "music": 0.0
     },
     {
@@ -85,7 +85,7 @@
       "to": 16.739,
       "sid": 10,
       "location": 2,
-      "content": "Nhưng giống như hoa khổ, nói nhanh mà tận",
+      "content": "Chỉ là như lời Hoa Khổ nói, làm nhanh lên.",
       "music": 0.9999996666667778
     },
     {
@@ -93,7 +93,7 @@
       "to": 19.59,
       "sid": 11,
       "location": 2,
-      "content": "Cả đời khó hái",
+      "content": "Cả đời khó hái.",
       "music": 0.31372545943868085
     },
     {
@@ -101,7 +101,7 @@
       "to": 21.25,
       "sid": 12,
       "location": 2,
-      "content": "Công công của gia tộc Mặc",
+      "content": "Công công công, lão Mạc.",
       "music": 0.0
     },
     {
@@ -109,7 +109,7 @@
       "to": 22.83,
       "sid": 13,
       "location": 2,
-      "content": "Xem ra Phi Tiên Cốc không còn xa nữa",
+      "content": "Xem ra không còn xa Phi Tiên Cốc.",
       "music": 0.0
     },
     {
@@ -117,7 +117,7 @@
       "to": 25.86,
       "sid": 14,
       "location": 2,
-      "content": "Gâu gâu gâu hahaha",
+      "content": "Gâu gâu gâu, haha!",
       "music": 0.0
     },
     {
@@ -125,7 +125,7 @@
       "to": 27.38,
       "sid": 15,
       "location": 2,
-      "content": "Linh khí bốn phía dày đặc",
+      "content": "Linh khí xung quanh dày đặc.",
       "music": 0.0
     },
     {
@@ -133,7 +133,7 @@
       "to": 29.54,
       "sid": 16,
       "location": 2,
-      "content": "Đôi khi trên trời thoáng qua một tia hồng quang",
+      "content": "Thỉnh thoảng trên trời lại xẹt qua từng tia hồng quang.",
       "music": 0.0
     },
     {
@@ -141,7 +141,7 @@
       "to": 31.98,
       "sid": 17,
       "location": 2,
-      "content": "Rõ ràng là tu sĩ đang phi hành ngang qua",
+      "content": "Rõ ràng là các tu sĩ đang gấp rút qua đường.",
       "music": 0.0
     },
     {
@@ -149,7 +149,7 @@
       "to": 38.54,
       "sid": 18,
       "location": 2,
-      "content": "A a, tốt quá!",
+      "content": "A a, tốt quá rồi!",
       "music": 0.0
     },
     {
@@ -157,7 +157,7 @@
       "to": 40.02,
       "sid": 19,
       "location": 2,
-      "content": "Cuối cùng cũng gặp đồng đạo rồi",
+      "content": "Cuối cùng cũng gặp được đồng đạo.",
       "music": 0.0
     },
     {
@@ -165,7 +165,7 @@
       "to": 41.16,
       "sid": 20,
       "location": 2,
-      "content": "Cả quãng đường không ai nói chuyện",
+      "content": "Trên đường này chẳng ai nói chuyện.",
       "music": 0.0
     },
     {
@@ -173,7 +173,7 @@
       "to": 42.55,
       "sid": 21,
       "location": 2,
-      "content": "Chán chết đi được",
+      "content": "Chán chết tôi mất.",
       "music": 0.0
     },
     {
@@ -181,7 +181,7 @@
       "to": 44.91,
       "sid": 22,
       "location": 2,
-      "content": "Đạo hữu, ngài cũng đang đi đến Tùng Vân Phường sao?",
+      "content": "Đạo hữu, ngươi cũng đến Tùng Vân Phường phải không?",
       "music": 0.0
     },
     {
@@ -189,7 +189,7 @@
       "to": 47.41,
       "sid": 23,
       "location": 2,
-      "content": "Vài tháng nữa là đến Đại hội Phi Tiên 5 năm một lần rồi",
+      "content": "Vài tháng nữa là Đại hội Phi Tiên năm năm một lần.",
       "music": 0.0
     },
     {
@@ -197,7 +197,7 @@
       "to": 48.57,
       "sid": 24,
       "location": 2,
-      "content": "Tên này đúng là kẻ lắm lời",
+      "content": "Tên này đúng là một kẻ lắm mồm.",
       "music": 0.0
     },
     {
@@ -205,7 +205,7 @@
       "to": 49.73,
       "sid": 25,
       "location": 2,
-      "content": "Chẳng đợi Đường nhân đáp lại",
+      "content": "Chưa đợi Đường Nhân đáp lời.",
       "music": 0.0
     },
     {
@@ -213,7 +213,7 @@
       "to": 51.47,
       "sid": 26,
       "location": 2,
-      "content": "Hắn đã tự mình mở miệng kể liên hồi",
+      "content": "Hắn đã tự mở hộp chuyện.",
       "music": 0.0
     },
     {
@@ -221,7 +221,7 @@
       "to": 53.09,
       "sid": 27,
       "location": 2,
-      "content": "Đạo hữu, tại hạ tên là Vạn Tiểu Phong",
+      "content": "Đạo hữu, ta tên là Vạn Tiểu Phong.",
       "music": 0.0
     },
     {
@@ -229,7 +229,7 @@
       "to": 54.73,
       "sid": 28,
       "location": 2,
-      "content": "Không biết đạo hữu họ gì tên chi?",
+      "content": "Không biết đạo hữu họ gì, tên chi?",
       "music": 0.0
     },
     {
@@ -237,7 +237,7 @@
       "to": 58.51,
       "sid": 29,
       "location": 2,
-      "content": "Thái Khôn, chắc hẳn là người Thái gia trên đảo Thái Bình chứ?",
+      "content": "Thái Khôn, chắc hẳn là nhà Thái đảo Thái Bình nhỉ?",
       "music": 0.0
     },
     {
@@ -245,7 +245,7 @@
       "to": 60.67,
       "sid": 30,
       "location": 2,
-      "content": "Khôn Khôn huynh đệ à, ngài đang ăn gì vậy?",
+      "content": "Huynh đệ Khôn Khôn à!",
       "music": 0.0
     },
     {
@@ -253,7 +253,7 @@
       "to": 62.53,
       "sid": 31,
       "location": 2,
-      "content": "Đường nhân thoáng sững sờ",
+      "content": "Ngươi đang ăn gì thế?",
       "music": 0.0
     },
     {
@@ -261,7 +261,7 @@
       "to": 63.67,
       "sid": 32,
       "location": 2,
-      "content": "Không ngờ kẻ này lại tự nhiên đến thế",
+      "content": "Đường Nhân ngạc nhiên.",
       "music": 0.0
     },
     {
@@ -269,7 +269,7 @@
       "to": 64.13,
       "sid": 33,
       "location": 2,
-      "content": "Đường nhân xé một cái đùi gà nướng đưa cho Vạn Tiểu Phong",
+      "content": "Không ngờ được.",
       "music": 0.0
     },
     {
@@ -277,7 +277,7 @@
       "to": 65.29,
       "sid": 34,
       "location": 2,
-      "content": "Vạn Tiểu Phong chẳng khách khí, nhận lấy ăn ngay",
+      "content": "Tên này đúng là kiểu tự nhiên như ruồi.",
       "music": 0.0
     },
     {
@@ -285,7 +285,7 @@
       "to": 67.37,
       "sid": 35,
       "location": 2,
-      "content": "Chẳng chút nghi ngờ rằng đối phương bỏ độc hại mình",
+      "content": "Đường Nhân chia một đùi gà nướng cho Vạn Tiểu Phong.",
       "music": 0.0
     },
     {
@@ -293,7 +293,7 @@
       "to": 68.63,
       "sid": 36,
       "location": 2,
-      "content": "Vạn huynh đệ, ta luôn bế quan khổ tu trong tộc",
+      "content": "Vạn Tiểu Phong cũng không khách sáo.",
       "music": 0.0
     },
     {
@@ -301,7 +301,7 @@
       "to": 69.77,
       "sid": 37,
       "location": 2,
-      "content": "Hiểu biết về giới tu tiên cũng không nhiều",
+      "content": "Cầm lấy liền ăn ngay.",
       "music": 0.0
     },
     {
@@ -309,7 +309,7 @@
       "to": 71.88,
       "sid": 38,
       "location": 2,
-      "content": "Huynh có thể giảng cho ta nghe một chút được chăng?",
+      "content": "Hoàn toàn không sợ Đường Nhân hạ độc hại hắn.",
       "music": 0.0
     },
     {
@@ -317,7 +317,7 @@
       "to": 74.98,
       "sid": 39,
       "location": 2,
-      "content": "Ta, Vạn Tiểu Phong, được mệnh danh là thông tỏ vạn sự",
+      "content": "Vạn huynh đệ!",
       "music": 0.0
     },
     {
@@ -325,7 +325,7 @@
       "to": 76.38,
       "sid": 40,
       "location": 2,
-      "content": "Khôn huynh đệ, ngài hỏi đúng người rồi",
+      "content": "Ta luôn khổ luyện trong tộc.",
       "music": 0.0
     },
     {
@@ -333,7 +333,7 @@
       "to": 78.54,
       "sid": 41,
       "location": 2,
-      "content": "Ba môn, đại Lê Quốc",
+      "content": "Không hiểu biết nhiều về giới tu tiên.",
       "music": 0.0
     },
     {
@@ -341,7 +341,7 @@
       "to": 80.4,
       "sid": 42,
       "location": 2,
-      "content": "Giới tu tiên có tổng cộng vài đại thế lực",
+      "content": "Ngươi có thể kể cho ta nghe chút được không?",
       "music": 0.0
     },
     {
@@ -349,7 +349,7 @@
       "to": 82.76,
       "sid": 43,
       "location": 2,
-      "content": "Bao gồm sáu phái:",
+      "content": "Ta, Vạn Tiểu Phong, được gọi là Vạn sự thông đây!",
       "music": 0.0
     },
     {
@@ -357,7 +357,7 @@
       "to": 83.24,
       "sid": 44,
       "location": 2,
-      "content": "Thái Ất Kiếm Tông, Tố Nữ Phái, Diệu Đan Các",
+      "content": "Khôn huynh đệ.",
       "music": 0.0
     },
     {
@@ -365,7 +365,7 @@
       "to": 84.16,
       "sid": 45,
       "location": 2,
-      "content": "Thiên Cung Môn, Lôi Dương Tông, Đại Thiền Tự",
+      "content": "Ngươi hỏi đúng người rồi.",
       "music": 0.0
     },
     {
@@ -373,7 +373,7 @@
       "to": 85.0,
       "sid": 46,
       "location": 2,
-      "content": "Còn ba đại gia tộc là Lăng gia, Tô gia, và Mộ Dung gia",
+      "content": "Tam môn Đại Ly Quốc.",
       "music": 0.0
     },
     {
@@ -381,7 +381,7 @@
       "to": 86.6,
       "sid": 47,
       "location": 2,
-      "content": "Vậy Tùng Vân Phường chúng ta đến lần này thuộc thế lực nào vậy?",
+      "content": "Giới tu tiên có mấy thế lực lớn.",
       "music": 0.0
     },
     {
@@ -389,7 +389,7 @@
       "to": 87.52,
       "sid": 48,
       "location": 2,
-      "content": "Tùng Vân Phường vốn là một thung lũng mà một đại sư lập ra để thu đồ đệ",
+      "content": "Lần lượt là sáu phái.",
       "music": 0.0
     },
     {
@@ -397,7 +397,7 @@
       "to": 88.44,
       "sid": 49,
       "location": 2,
-      "content": "Vì Đại hội Phi Tiên mà được gọi là Phi Tiên Cốc",
+      "content": "1×3 đại gia.",
       "music": 0.0
     },
     {
@@ -405,7 +405,7 @@
       "to": 89.89,
       "sid": 50,
       "location": 2,
-      "content": "Sau đó, nhiều tán tu tụ hội tại đây",
+      "content": "Sáu phái là Thái Ất Kiếm Tông,",
       "music": 0.0
     },
     {
@@ -413,7 +413,7 @@
       "to": 90.73,
       "sid": 51,
       "location": 2,
-      "content": "Hình thành một phường thị nhỏ",
+      "content": "Tố Nữ Phái,",
       "music": 0.0
     },
     {
@@ -421,7 +421,7 @@
       "to": 91.59,
       "sid": 52,
       "location": 2,
-      "content": "Nơi này do người Bích Lạc Thành quản lý",
+      "content": "Diệu Đan Các,",
       "music": 0.0
     },
     {
@@ -429,7 +429,7 @@
       "to": 92.43,
       "sid": 53,
       "location": 2,
-      "content": "Phần lớn thời gian Vạn Tiểu Phong nói",
+      "content": "Thiên Cung Môn,",
       "music": 0.0
     },
     {
@@ -437,7 +437,7 @@
       "to": 96.08,
       "sid": 54,
       "location": 2,
-      "content": "Đường nhân chỉ lặng lẽ lắng nghe",
+      "content": "và Lôi Dương Tổng Hợp, bao gồm Đại Thiền Tự, Dịch Thành, Thấp Bích Lạc Thành, và Bích Lạc Thành.",
       "music": 0.0
     },
     {
@@ -445,7 +445,7 @@
       "to": 97.46,
       "sid": 55,
       "location": 2,
-      "content": "Một lúc lâu sau...",
+      "content": "Nằm sâu trong vùng Thập Vạn Đại Sơn.",
       "music": 0.0
     },
     {
@@ -453,7 +453,7 @@
       "to": 99.12,
       "sid": 56,
       "location": 2,
-      "content": "Vạn huynh đệ, không biết huynh bình thường thích gì?",
+      "content": "Đây là siêu đô thị duy nhất được xây dựng bởi một Nguyên Anh tán tu,",
       "music": 0.0
     },
     {
@@ -461,7 +461,7 @@
       "to": 101.15,
       "sid": 57,
       "location": 2,
-      "content": "Thích nhiều thứ lắm: mỹ thực, du sơn ngoạn thủy",
+      "content": "lão tổ Bích Lạc sáng lập.",
       "music": 0.0
     },
     {
@@ -469,7 +469,7 @@
       "to": 102.99,
       "sid": 58,
       "location": 2,
-      "content": "Đặc biệt thích nghe kỳ văn dị sự",
+      "content": "Tam đại gia bao gồm Lăng Gia Công,",
       "music": 0.0
     },
     {
@@ -477,7 +477,7 @@
       "to": 104.91,
       "sid": 59,
       "location": 2,
-      "content": "Nhưng đáng tiếc, trưởng bối trong nhà không cho phép làm mấy chuyện đó",
+      "content": "Thư Gia và Mộ Dung Gia.",
       "music": 0.0
     },
     {
@@ -485,7 +485,7 @@
       "to": 108.7,
       "sid": 60,
       "location": 2,
-      "content": "Còn Khôn Khôn huynh đệ, ngài có sở thích gì không?",
+      "content": "Vậy lần này chúng ta đến Tùng Vân Phường,",
       "music": 0.0
     },
     {
@@ -493,7 +493,7 @@
       "to": 110.82,
       "sid": 61,
       "location": 2,
-      "content": "Thích đưa tang đấy!",
+      "content": "không biết thuộc thế lực nào nhỉ?",
       "music": 0.0
     },
     {
@@ -501,7 +501,7 @@
       "to": 113.9,
       "sid": 62,
       "location": 2,
-      "content": "Vạn huynh đệ, ngày nào đó nếu ngài ngã xuống",
+      "content": "Tùng Vân Phường vốn là một thung lũng nơi đại sư Lợi nhận đồ đệ.",
       "music": 0.0
     },
     {
@@ -509,7 +509,7 @@
       "to": 115.54,
       "sid": 63,
       "location": 2,
-      "content": "Ta có thể tìm một nơi phong thủy bảo địa",
+      "content": "Vì lý do Đại hội Phi Tiên,",
       "music": 0.0
     },
     {
@@ -517,7 +517,7 @@
       "to": 116.86,
       "sid": 64,
       "location": 2,
-      "content": "Làm trọn gói mọi việc từ đưa tang đến mai táng cho ngài",
+      "content": "nên được gọi là Phi Tiên Cốc.",
       "music": 0.0
     },
     {
@@ -525,7 +525,7 @@
       "to": 118.87,
       "sid": 65,
       "location": 2,
-      "content": "Khôn Khôn huynh đệ, sở thích của ngài đúng là thú vị thật",
+      "content": "Sau đó tự nhiên tập hợp nhiều tán tu,",
       "music": 0.0
     },
     {
@@ -533,7 +533,7 @@
       "to": 120.63,
       "sid": 66,
       "location": 2,
-      "content": "Đợi sau khi ta chết",
+      "content": "hình thành một phường nhỏ.",
       "music": 0.0
     },
     {
@@ -541,7 +541,7 @@
       "to": 122.979,
       "sid": 67,
       "location": 2,
-      "content": "Nhất định nhờ ngài tìm một nơi tốt để an táng cho ta",
+      "content": "Phường này do người từ Bích Lạc Thành quản lý.",
       "music": 0.0
     },
     {
@@ -549,7 +549,7 @@
       "to": 125.199,
       "sid": 68,
       "location": 2,
-      "content": "Ta thấy nơi này cũng không tệ lắm đâu",
+      "content": "Hầu hết thời gian là Vạn Tiểu Phong nói,",
       "music": 0.0
     },
     {
@@ -557,7 +557,7 @@
       "to": 127.819,
       "sid": 69,
       "location": 2,
-      "content": "Có lẽ là một nơi mai táng lý tưởng",
+      "content": "Đường Nhân ngồi nghe nửa ngày,",
       "music": 0.0
     },
     {
@@ -565,7 +565,7 @@
       "to": 130.319,
       "sid": 70,
       "location": 2,
-      "content": "Khôn Khôn huynh đệ, ngươi... ngươi!",
+      "content": "Vạn huynh đệ.",
       "music": 0.0
     },
     {
@@ -573,7 +573,7 @@
       "to": 132.24,
       "sid": 71,
       "location": 2,
-      "content": "Ra đây đi! Hay là phải để ta mời ngươi ra?",
+      "content": "Không biết thường ngày ngươi thích gì?",
       "music": 0.0
     },
     {
@@ -581,7 +581,7 @@
       "to": 133.54,
       "sid": 72,
       "location": 2,
-      "content": "Tiểu tử, bộ Hoàng Thổ Y của ta",
+      "content": "Thích thì nhiều lắm.",
       "music": 0.0
     },
     {
@@ -589,7 +589,7 @@
       "to": 135.1,
       "sid": 73,
       "location": 2,
-      "content": "Có thể thu liễm khí tức, hòa mình vào đất đá",
+      "content": "Mỹ thực, du ngoạn sơn thủy.",
       "music": 0.0
     },
     {
@@ -597,7 +597,7 @@
       "to": 136.78,
       "sid": 74,
       "location": 2,
-      "content": "Ngươi làm thế nào nhìn ra được ngụy trang của ta?",
+      "content": "Đặc biệt thích nghe kỳ văn dị sự.",
       "music": 0.0
     },
     {
@@ -605,7 +605,7 @@
       "to": 138.76,
       "sid": 75,
       "location": 2,
-      "content": "Vạn Tiểu Phong vẫn luôn ẩn giấu rất giỏi",
+      "content": "Đáng tiếc trưởng bối trong nhà không cho làm mấy thứ này.",
       "music": 0.0
     },
     {
@@ -613,7 +613,7 @@
       "to": 139.72,
       "sid": 76,
       "location": 2,
-      "content": "Không để lộ chút sơ hở nào",
+      "content": "Khôn Khôn huynh đệ.",
       "music": 0.0
     },
     {
@@ -621,7 +621,7 @@
       "to": 141.31,
       "sid": 77,
       "location": 2,
-      "content": "Nhưng đến lúc vào hẻm núi",
+      "content": "Còn ngươi, có sở thích gì?",
       "music": 0.0
     },
     {
@@ -629,7 +629,7 @@
       "to": 143.55,
       "sid": 78,
       "location": 2,
-      "content": "Hắn lại vô tình để lộ sát ý",
+      "content": "Thích đưa tang cho người ta đó.",
       "music": 0.0
     },
     {
@@ -637,7 +637,7 @@
       "to": 145.63,
       "sid": 79,
       "location": 2,
-      "content": "Đáng tiếc, Đường nhân từng trải qua Thần Biến Cảnh",
+      "content": "Vạn huynh đệ, ngày nào đó ngươi mất,",
       "music": 0.0
     },
     {
@@ -645,7 +645,7 @@
       "to": 147.77,
       "sid": 80,
       "location": 2,
-      "content": "Lục giác thông linh, đặc biệt mẫn cảm với sát ý",
+      "content": "ta có thể tìm cho huynh một mảnh đất phong thủy bảo địa.",
       "music": 0.0
     },
     {
@@ -653,7 +653,7 @@
       "to": 149.25,
       "sid": 81,
       "location": 2,
-      "content": "Thêm nữa, hắn là phong thủy sư tam giai",
+      "content": "Mọi dịch vụ trọn gói đều có.",
       "music": 0.0
     },
     {
@@ -661,7 +661,7 @@
       "to": 152.39,
       "sid": 82,
       "location": 2,
-      "content": "Thần hồn đã được địa khí rèn luyện",
+      "content": "Khôn Khôn huynh đệ, sở thích này thú vị thật.",
       "music": 0.0
     },
     {
@@ -669,7 +669,7 @@
       "to": 153.17,
       "sid": 83,
       "location": 2,
-      "content": "Mạnh hơn người thường",
+      "content": "Đợi ta chết rồi,",
       "music": 0.0
     },
     {
@@ -677,7 +677,7 @@
       "to": 155.71,
       "sid": 84,
       "location": 2,
-      "content": "Tiểu tử, ngươi dám giết đệ đệ ta",
+      "content": "ta nhất định nhờ ngươi tìm chỗ tốt để chôn cất.",
       "music": 0.0
     },
     {
@@ -685,7 +685,7 @@
       "to": 157.37,
       "sid": 85,
       "location": 2,
-      "content": "Ta phải luyện hồn ngươi, thu hồn luyện phách",
+      "content": "Ta thấy chỗ này cũng không tồi đâu.",
       "music": 0.0
     },
     {
@@ -693,7 +693,7 @@
       "to": 161.44,
       "sid": 86,
       "location": 2,
-      "content": "Ta khuyên ngươi tự mình đầu hàng",
+      "content": "Ta nghĩ nơi đây chính là một mộ phần lý tưởng.",
       "music": 0.0
     },
     {
@@ -701,7 +701,7 @@
       "to": 162.66,
       "sid": 87,
       "location": 2,
-      "content": "Bớt chịu khổ",
+      "content": "Khôn Khôn huynh đệ.",
       "music": 0.0
     },
     {
@@ -709,7 +709,7 @@
       "to": 166.98,
       "sid": 88,
       "location": 2,
-      "content": "Ta cũng có một đề nghị",
+      "content": "Ngươi, ngươi...",
       "music": 0.2608695368620042
     },
     {
@@ -717,7 +717,7 @@
       "to": 170.54,
       "sid": 89,
       "location": 2,
-      "content": "Chi bằng ngươi tự sát ngay bây giờ",
+      "content": "Ra đây đi.",
       "music": 0.0
     },
     {
@@ -725,7 +725,7 @@
       "to": 172.8,
       "sid": 90,
       "location": 2,
-      "content": "Ta bảo đảm sẽ lo chu toàn việc mai táng",
+      "content": "Chẳng lẽ để ta mời ngươi ra sao?",
       "music": 0.0
     },
     {
@@ -733,7 +733,7 @@
       "to": 176.269,
       "sid": 91,
       "location": 2,
-      "content": "Kẻ thu xác ngông cuồng!",
+      "content": "Tiểu tử, Hoàng Thổ Y của ta có thể thu liễm khí tức,",
       "music": 0.0
     },
     {
@@ -741,7 +741,7 @@
       "to": 177.649,
       "sid": 92,
       "location": 2,
-      "content": "Ra tay đi, xem ngươi có bản lĩnh gì",
+      "content": "hòa làm một với đất đá.",
       "music": 0.0
     },
     {
@@ -749,7 +749,7 @@
       "to": 179.769,
       "sid": 93,
       "location": 2,
-      "content": "Đường nhân chỉ cười nhạt",
+      "content": "Ngươi làm sao nhìn thấu ngụy trang của ta?",
       "music": 0.0
     },
     {
@@ -757,7 +757,7 @@
       "to": 183.92,
       "sid": 94,
       "location": 2,
-      "content": "Nhẹ nhàng vỗ tay",
+      "content": "Vạn Tiểu Phong luôn che giấu rất kỹ,",
       "music": 0.0
     },
     {
@@ -765,7 +765,7 @@
       "to": 185.26,
       "sid": 95,
       "location": 2,
-      "content": "Đất đá xung quanh rung động",
+      "content": "không để lộ chút sơ hở nào.",
       "music": 0.0
     },
     {
@@ -773,7 +773,7 @@
       "to": 186.58,
       "sid": 96,
       "location": 2,
-      "content": "Linh khí hội tụ thành một vòng xoáy lớn",
+      "content": "Nhưng đến hẻm núi này,",
       "music": 0.0
     },
     {
@@ -781,7 +781,7 @@
       "to": 187.84,
       "sid": 97,
       "location": 2,
-      "content": "Vạn Tiểu Phong kinh ngạc",
+      "content": "hắn để lộ một chút sát ý.",
       "music": 0.0
     },
     {
@@ -789,7 +789,7 @@
       "to": 189.78,
       "sid": 98,
       "location": 2,
-      "content": "Không ngờ đối phương lại mạnh đến vậy",
+      "content": "Đáng tiếc Đường Nhân từng trải qua Thần Biến Cảnh,",
       "music": 0.0
     },
     {
@@ -797,7 +797,7 @@
       "to": 190.64,
       "sid": 99,
       "location": 2,
-      "content": "Ngươi... ngươi là ai?",
+      "content": "lục giác thông linh,",
       "music": 0.0
     },
     {
@@ -805,7 +805,7 @@
       "to": 191.92,
       "sid": 100,
       "location": 2,
-      "content": "Đường nhân không trả lời",
+      "content": "cực kỳ nhạy cảm với sát ý.",
       "music": 0.0
     },
     {
@@ -813,7 +813,7 @@
       "to": 193.54,
       "sid": 101,
       "location": 2,
-      "content": "Chỉ bước một bước về phía trước",
+      "content": "Hơn nữa, hắn còn là Phong Thủy Sư tam giai,",
       "music": 0.0
     },
     {
@@ -821,7 +821,7 @@
       "to": 195.04,
       "sid": 102,
       "location": 2,
-      "content": "Vạn Tiểu Phong cảm nhận được sát ý",
+      "content": "thần hồn từng được địa khí tôi luyện,",
       "music": 0.0
     },
     {
@@ -829,7 +829,7 @@
       "to": 196.84,
       "sid": 103,
       "location": 2,
-      "content": "Bắt đầu hoảng hốt, định tháo chạy",
+      "content": "mạnh hơn người thường nhiều.",
       "music": 0.0
     },
     {
@@ -837,7 +837,7 @@
       "to": 200.88,
       "sid": 104,
       "location": 2,
-      "content": "Nhưng đã quá muộn",
+      "content": "Tiểu tử, ngươi dám giết đệ đệ của ta.",
       "music": 0.0
     },
     {
@@ -845,7 +845,7 @@
       "to": 202.52,
       "sid": 105,
       "location": 2,
-      "content": "Một luồng ánh sáng chói lòa lóe lên",
+      "content": "Ta sẽ lục hồn luyện phách của ngươi.",
       "music": 0.0
     },
     {
@@ -853,7 +853,7 @@
       "to": 204.18,
       "sid": 106,
       "location": 2,
-      "content": "Đầu của hắn rơi xuống đất",
+      "content": "Ta khuyên ngươi ngoan ngoãn chịu trói.",
       "music": 0.0
     },
     {
@@ -861,7 +861,7 @@
       "to": 205.63,
       "sid": 107,
       "location": 2,
-      "content": "Đường nhân lạnh lùng nhặt lấy túi trữ vật của hắn",
+      "content": "Đỡ chịu chút đau khổ.",
       "music": 0.0
     },
     {
@@ -869,7 +869,7 @@
       "to": 206.93,
       "sid": 108,
       "location": 2,
-      "content": "Lẩm bẩm: \"Đáng tiếc, người này không biết điều\"",
+      "content": "Ta cũng có một đề nghị.",
       "music": 0.0
     },
     {
@@ -877,7 +877,7 @@
       "to": 208.81,
       "sid": 109,
       "location": 2,
-      "content": "Tiếp tục bước đi về phía trước",
+      "content": "Chi bằng bây giờ ngươi tự sát đi.",
       "music": 0.0
     },
     {
@@ -885,7 +885,7 @@
       "to": 210.11,
       "sid": 110,
       "location": 2,
-      "content": "Con chó nhỏ theo sau, gâu gâu sủa vài tiếng",
+      "content": "Ta đảm bảo lo hậu sự cho ngươi.",
       "music": 0.0
     },
     {
@@ -893,7 +893,7 @@
       "to": 211.86,
       "sid": 111,
       "location": 2,
-      "content": "Bóng dáng hai người một chó biến mất trong rừng sâu",
+      "content": "Thu xác và ngông cuồng.",
       "music": 0.0
     }
   ]

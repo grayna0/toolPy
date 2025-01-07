@@ -67,10 +67,10 @@ for url in listUrl:
     if url not in unique_VA:
        unique_VA.append(url) 
 # DOWNLOAD VIDEO AND AUDIO => TÊN FILE = file_id(0,1,2,3).mp4
-for  url in unique_VA:
+for index, url in enumerate(unique_VA):
     response = requests.get(url)
     if response.status_code == 200:
-        with open(f'file_{id}.mp4','wb') as file:
+        with open(f'C:/Users/pc/toolPy/file_{index}.mp4','wb') as file:
             file.write(response.content)
     else:
         print("failed to download file")        

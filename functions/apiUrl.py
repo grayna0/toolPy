@@ -3,7 +3,7 @@
 
 Api_sub = "https://aisubtitle.hdslb.com/bfs/ai_subtitle/prod"
 
-Url_video ="https://www.bilibili.com/video/BV1ZKBKY2ESC/?spm_id_from=333.337.search-card.all.click"
+Url_video ="https://www.bilibili.com/video/BV1xMiBYUEBM/?spm_id_from=333.337.search-card.all.click&vd_source=1124f7b904b73e398c740b637205feb4"
 
 
 API_Get_audio_video = "https://upos-hz-mirrorakam.akamaized.net"
