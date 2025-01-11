@@ -34,29 +34,40 @@ def convert_text_to_audio(text, lang='vi',speed=200):
 def convert_json_to_audio(json_file_path, output_file="output.mp3"):
     try:
         # load timestamp
-        framHaveText = image__to__text.process_frames("C:/Users/pc/toolPy/file_0.mp4")
+        framHaveText = image__to__text.check_text_in_frames()
+        timestampArray = []
+        for index , i in enumerate(framHaveText):
+            
+            if i["text"] != framHaveText[index -1]["text"] :
+               timestampArray.append(i) 
         # Read JSON
+        print(timestampArray)
         with open(json_file_path, 'r',encoding="utf-8") as file:
             data = json.load(file) 
         audio_segments = []
-        
+        # chuyển đổi text to audio và xử lý những timestamp không có lời
+        for index,item in enumerate(timestampArray):
+            wrap__from =int(float(timestampArray[index]["timestamp"]) *1000)
+            wrap__to =int(float(timestampArray[index + 1]["timestamp"]) *1000)
         # Process each subtitle
-        for index,item in enumerate(data['body']):
-            start_time = int(float(item['from']) * 1000 )
-            end = int(float(item['to']) * 1000 )
-            audio = convert_text_to_audio(item['content'])
-            from__text =int(framHaveText[index]["timestamp"])
-            if  from__text *1000 < end:
-                print("1",from__text,end)
-          
-                audio_segments.append(audio)
-            elif  from__text *1000 > end :
-                print("2",from__text,end)
-                # add silence to audio 
-                silence = AudioSegment.silent(duration=from__text *1000 - end) 
-                audio_segments.append(silence)
-                audio_segments.append(audio)
-       
+            for id,item in enumerate(data['body']):
+                start_time = int(float(item['from']) * 1000 )
+                
+                end = int(float(item['to']) * 1000 )
+                
+                audio = convert_text_to_audio(item['content'])
+                
+                from__text =int(timestampArray[index]["timestamp"])
+                
+                checkWrap =wrap__from >= end and end <= wrap__to
+                if  checkWrap:
+            
+                    audio_segments.append(audio)
+                else:
+                    silence = AudioSegment.silent(duration=wrap__to  - len(audio_segments))
+                    audio_segments.append(silence) 
+                    
+            
         # Combine and export
         final_audio = sum(audio_segments)
         final_audio.export(f"C:/Users/pc/toolPy/functions/audio/final.mp3", format="mp3")

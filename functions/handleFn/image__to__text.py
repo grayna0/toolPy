@@ -34,7 +34,7 @@ def process_image_batch(img_paths, batch_size=4):  # Reduced batch size
             # Monitor GPU memory
             if torch.cuda.is_available():
                 memory_allocated = torch.cuda.memory_allocated(0) / 1024**2
-                if memory_allocated > 8000:  # 4GB threshold
+                if memory_allocated > 000:  # 4GB threshold
                     clear_gpu_memory()
             
             batch_results = reader.readtext(list(batch), detail=0)
@@ -101,11 +101,26 @@ def check_text_in_frames():
             # Process image
             text_results = reader.readtext(frame,detail=0,batch_size=8)
             if text_results:
-                if not results or text_results != results[-1]["text"]:
-                 results.append({
-                     'timestamp': timestamp,
-                     'text': text_results
-                 })
+                if len(results) == 0:
+                    results.append({
+                        'timestamp': timestamp,
+                        'text': text_results
+                    })
+                else:
+                    # Compare with previous result
+                    sameWord = set(results[-1]["text"]) & set(text_results)
+                    print(results[-1]["text"],text_results,"1111",sameWord)
+                    if len(sameWord) >= len(text_results) /2:
+                        results.append({
+                            'timestamp': timestamp,
+                            'text': text_results
+                        })
+                    else:
+                         results.append({
+                        'timestamp': timestamp,
+                        'text': text_results
+                    })
+            
              
             
             # Clear GPU memory periodically
@@ -118,6 +133,6 @@ def check_text_in_frames():
     return results
 if __name__ == '__main__':
     results = check_text_in_frames()
-    valid_results = [r for r in results if r['text']]
-    print(results)
-    print(f"Found text in {len(valid_results)} frames")
+    for i in results:
+        print(i["text"], i["timestamp"])
+    # print(f"Found text in {len(valid_results)} frames")
