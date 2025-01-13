@@ -100,29 +100,13 @@ def check_text_in_frames():
                 
             # Process image
             text_results = reader.readtext(frame,detail=0,batch_size=8)
-            if text_results:
-                if len(results) == 0:
-                    results.append({
-                        'timestamp': timestamp,
-                        'text': text_results
-                    })
-                else:
-                    # Compare with previous result
-                    sameWord = set(results[-1]["text"]) & set(text_results)
-                    print(results[-1]["text"],text_results,"1111",sameWord)
-                    if len(sameWord) >= len(text_results) /2:
-                        results.append({
-                            'timestamp': timestamp,
-                            'text': text_results
-                        })
-                    else:
-                         results.append({
-                        'timestamp': timestamp,
-                        'text': text_results
-                    })
+          
+            results.append({
+                    'timestamp': timestamp,
+                    'text': text_results
+                })
             
              
-            
             # Clear GPU memory periodically
             if len(results) % 10 == 0:
                 clear_gpu_memory()
@@ -131,8 +115,21 @@ def check_text_in_frames():
         print(f"Error processing frames: {e}")
         
     return results
-if __name__ == '__main__':
+def handle_timestamp() :
     results = check_text_in_frames()
+    results__frame =[]
+    for index ,frame in enumerate(results):
+        
+        if index < len(results) - 1:
+            next_text = results[index + 1]["text"] 
+        
+        if len(frame["text"]) > 0 and len(next_text) == 0  :
+            results__frame.append(frame)
+        if len(frame["text"]) == 0  and len(next_text) > 0:
+            results__frame.append(results[index + 1])
+        
+    return results__frame
+if __name__ == '__main__':
+    results = handle_timestamp()
     for i in results:
         print(i["text"], i["timestamp"])
-    # print(f"Found text in {len(valid_results)} frames")

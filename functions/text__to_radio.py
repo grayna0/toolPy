@@ -34,38 +34,44 @@ def convert_text_to_audio(text, lang='vi',speed=200):
 def convert_json_to_audio(json_file_path, output_file="output.mp3"):
     try:
         # load timestamp
-        framHaveText = image__to__text.check_text_in_frames()
-        timestampArray = []
-        for index , i in enumerate(framHaveText):
-            
-            if i["text"] != framHaveText[index -1]["text"] :
-               timestampArray.append(i) 
+        framHaveText = image__to__text.handle_timestamp()
+      
         # Read JSON
-        print(timestampArray)
         with open(json_file_path, 'r',encoding="utf-8") as file:
             data = json.load(file) 
         audio_segments = []
         # chuyển đổi text to audio và xử lý những timestamp không có lời
-        for index,item in enumerate(timestampArray):
-            wrap__from =int(float(timestampArray[index]["timestamp"]) *1000)
-            wrap__to =int(float(timestampArray[index + 1]["timestamp"]) *1000)
-        # Process each subtitle
-            for id,item in enumerate(data['body']):
-                start_time = int(float(item['from']) * 1000 )
-                
-                end = int(float(item['to']) * 1000 )
-                
-                audio = convert_text_to_audio(item['content'])
-                
-                from__text =int(timestampArray[index]["timestamp"])
-                
-                checkWrap =wrap__from >= end and end <= wrap__to
-                if  checkWrap:
+        for i in range(0, len(framHaveText), 2):
+            # Lấy khoảng silence
+            silence_start = framHaveText[i]["timestamp"] 
+            silence_end = framHaveText[i + 1]["timestamp"]
+             # Process each subtitle
+                # Tìm các đoạn trong timestamps thuộc khoảng này
             
+            relevant_timestamps = [
+                item for item in data["body"]
+                if silence_end >= item["from"] and  item["from"] >= silence_start
+                ]
+            print("relevant_timestamps",relevant_timestamps)
+            if i == 0 :
+                silence_duration = int((silence_start) * 1000 )  # Chuyển sang ms
+                print("im lang 1",silence_duration)
+                silence = AudioSegment.silent(duration=silence_duration)
+                audio_segments.append(silence)
+            else:
+                if len(audio_segments) < framHaveText[i - 1]["timestamp"]:
+                    
+                    silence_duration = int((silence_start - framHaveText[i - 1]["timestamp"]) * 1000 )
+                # else :
+                    # silence_duration = int((silence_start - len(audio_segments)) * 1000 )
+                    # Chuyển sang ms
+                silence = AudioSegment.silent(duration=silence_duration)
+                audio_segments.append(silence)
+            if relevant_timestamps:
+                for ts in relevant_timestamps:
+                    audio = convert_text_to_audio(ts["content"])
                     audio_segments.append(audio)
-                else:
-                    silence = AudioSegment.silent(duration=wrap__to  - len(audio_segments))
-                    audio_segments.append(silence) 
+
                     
             
         # Combine and export
