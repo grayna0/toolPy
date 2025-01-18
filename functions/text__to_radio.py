@@ -58,7 +58,8 @@ def convert_json_to_audio(json_file_path, output_file="output.mp3"):
         
         audio_segments = []
         lenaudio_segments = 0  # Tổng thời lượng audio đã xử lý
-        
+        last_ojbText = []
+        repeat_text=[]
         # Xử lý các timestamp
         for i in range(0, len(framHaveText), 2):
             # Lấy khoảng silence
@@ -67,26 +68,29 @@ def convert_json_to_audio(json_file_path, output_file="output.mp3"):
             
             # Tìm các đoạn text trong khoảng này
             data_text_performent = text_performent(data, silence_start, silence_end)
-            if data_text_performent:
-                for ts in data_text_performent:
-                    # Tính khoảng silence trước mỗi đoạn thoại
-                    silence_duration = max(0, int((silence_start - lenaudio_segments) * 1000))
+            if i >0 :
+                repeat_text = [item for item in data_text_performent if item["from"] == last_ojbText[0]["from"]]
+            last_ojbText = data_text_performent
+            if data_text_performent and repeat_text == []:
+                 # Tính khoảng silence trước mỗi đoạn thoại
+                if silence_start * 1000 > lenaudio_segments:
+                    silence_duration = max(0, int((silence_start * 1000 - lenaudio_segments) ))
                     silence = AudioSegment.silent(duration=silence_duration)
                     audio_segments.append(silence)
-                    lenaudio_segments += silence_duration
-
+                    lenaudio_segments += silence_duration  
+                elif silence_start * 1000 < lenaudio_segments:
+                    silence = AudioSegment.silent(duration=0)
+                    audio_segments.append(silence)    
+                for ts in data_text_performent:
                     # Chuyển đổi text thành audio
                     audio = convert_text_to_audio(ts["content"])
                     
                     # Kiểm tra và điều chỉnh tốc độ nếu cần
-                    if len(audio) > 100 and int(ts["from"] * 1000) < lenaudio_segments:
+                    if len(audio) > 100 :
                         audio_segments.append(audio)
                         lenaudio_segments += len(audio)
-                    else:
-                        # Tạo audio với tốc độ nhanh hơn nếu cần
-                        audio = convert_text_to_audio(ts["content"], speed=230)
-                        audio_segments.append(audio)
-                        lenaudio_segments += len(audio)
+                        
+                
 
         # Kết hợp và xuất audio
         final_audio = sum(audio_segments, AudioSegment.silent(duration=0))
@@ -97,7 +101,7 @@ def convert_json_to_audio(json_file_path, output_file="output.mp3"):
         logging.error(f"Error converting to audio: {e}")
         raise
 
-convert_json_to_audio("C:/Users/pc/toolPy/functions/subtitlesViet.json", output_file="output.imp3")    
+convert_json_to_audio("C:/Users/pc/toolPy/functions/subtitlesViet.json", output_file="output.mp3")    
 
 
 
