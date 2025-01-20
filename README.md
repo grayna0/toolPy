@@ -7,6 +7,7 @@ git clone https://github.com/grayna0/toolPy.git
 cài đặt  Python  và ffmpeg
 
 <!-- setup Interpreter -->
+<!-- easyocr chỉ sử dụng ở bản python 3.10 or 11 -->
 Ctrl + Shift + P ==> Python : select interpreter ==> chọn bản python( vd : ... 3.10)
 
 <!-- run command to install libs -->
