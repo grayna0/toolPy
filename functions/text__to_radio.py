@@ -6,8 +6,8 @@ import os
 import logging
 from pyttsx3 import init as pyttsx3_init
 import sys
-sys.path.append("C:/Users/pc/toolPy/functions/handleFn")
-import handleFn.image__to__text as image__to__text
+sys.path.append("C:/Users/pc/toolPy/functions")
+import image__to__text as image__to__text
 def convert_text_to_audio(text, lang='vi',speed=200):
     try:
         # Primary method - pyttsx3
@@ -101,7 +101,7 @@ def convert_json_to_audio(json_file_path, output_file="output.mp3"):
         logging.error(f"Error converting to audio: {e}")
         raise
 
-convert_json_to_audio("C:/Users/pc/toolPy/functions/subtitlesViet.json", output_file="output.mp3")    
+
 
 
 

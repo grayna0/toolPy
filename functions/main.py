@@ -1,7 +1,16 @@
 import tkinter as tk
 from tkinter import ttk
 import Get_Sub_bilibili
-# import Login__Chatgpt
+import downloadVideo
+import sys
+sys.path.append("C:/Users/pc/toolPy/functions")
+import image__to__text as image__to__text
+import text__to_radio as text__to_radio
+import os
+
+
+_path = os.path.dirname(os.path.abspath("functions"))
+
 def translateFn():
     print("translatsse")
 class TranslationApp:
@@ -13,7 +22,7 @@ class TranslationApp:
         # Create main frame
         main_frame = ttk.Frame(root, padding="20")
         main_frame.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
-        
+
         # Input fields
         ttk.Label(main_frame, text="Video URL:").grid(row=0, column=0, sticky=tk.W)
         self.url_input = ttk.Entry(main_frame, width=40)
@@ -31,9 +40,9 @@ class TranslationApp:
         authen__key = self.key_input.get()
         url = self.url_input.get()
         # Add translation logic here
-        
+        downloadVideo.downloadAudio(url)
         Get_Sub_bilibili.getSub(api_url=authen__key,video_id=url)
-
+        # text__to_radio.convert_json_to_audio(f"{_path}/functions/subtitlesViet.json", output_file="output.mp3")     
 def main():
     root = tk.Tk()
     app = TranslationApp(root)
