@@ -4,7 +4,7 @@
 
 from PIL import ImageFilter
 from PIL import Image,ImageDraw
-from moviepy import VideoFileClip, TextClip, CompositeVideoClip,concatenate_videoclips,ImageClip
+from moviepy import VideoFileClip, TextClip, CompositeVideoClip,ImageClip
 import numpy as np
 import cv2
 import easyocr
@@ -15,6 +15,7 @@ import multiprocessing
 import torch
 import gc
 import os
+import write_sub_to_json
 _path = os.path.dirname(os.path.abspath("functions"))
 video_path = f"{_path}/file_0.mp4"
 
@@ -80,6 +81,7 @@ def crop__image_fromVideo(video_path):
             output_path = f"{_path}/functions/AUDIOVIET/frame_{timestamp}.png"
             cv2.imwrite(output_path, crop)
     return timestampArr
+
 def check_text_in_frames():
     clear_gpu_memory()
     reader = get_reader()
@@ -112,8 +114,13 @@ def check_text_in_frames():
         print(f"Error processing frames: {e}")
         
     return results
-
+def removeImage():
+    for filename in os.listdir(_path+"/functions/AUDIOVIET"):
+        if filename.endswith(".png"):
+            os.remove(os.path.join(_path+"/functions/AUDIOVIET", filename))
+   
 def handle_timestamp() :
+    write_sub_to_json.write_json_sub()
     results = check_text_in_frames()
     results__frame =[]
     for index ,frame in enumerate(results):
@@ -126,4 +133,5 @@ def handle_timestamp() :
         if len(frame["text"]) == 0  and len(next_text) > 0:
             results__frame.append(results[index + 1])
         
+    removeImage()
     return results__frame
