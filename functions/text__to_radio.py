@@ -8,6 +8,24 @@ from pyttsx3 import init as pyttsx3_init
 import sys
 sys.path.append("C:/Users/pc/toolPy/functions")
 import image__to__text as image__to__text
+from moviepy import TextClip,VideoFileClip,CompositeVideoClip
+
+
+video_path= "C:/Users/pc/toolPy/file_0.mp4"
+# Đường dẫn FFmpeg hỗ trợ CUDA
+ffmpeg_cuda_path = "D:/ffmpeg-2024-12-23-git-6c9218d748-full_build/bin/ffmpeg"
+video = VideoFileClip(video_path)
+def add_and_blur_text(data_text,start,end):
+    # video_short= video[start:end]
+    text = TextClip(text=data_text,
+    font="tahoma.ttf",
+    font_size=20,
+    color='black',
+    bg_color="white",
+    duration=end-start,
+    size=(video.size[0] - 300, None)).with_start(start).with_position("bottom")
+    return CompositeVideoClip([video, text])
+
 def convert_text_to_audio(text, lang='vi',speed=200):
     try:
         # Primary method - pyttsx3
@@ -25,9 +43,7 @@ def convert_text_to_audio(text, lang='vi',speed=200):
         tts = gTTS(text=text, lang=lang)
         tts.save(temp_file)
         audio = AudioSegment.from_mp3(temp_file)
-        if speed != 150:
-            speed_change = speed / 150.0  # Calculate ratio
-            audio = audio.speedup(playback_speed=speed_change)
+        
         os.remove(temp_file)
         return audio
     # Read JSON
@@ -60,6 +76,8 @@ def convert_json_to_audio(json_file_path, output_file="output.mp3"):
         lenaudio_segments = 0  # Tổng thời lượng audio đã xử lý
         last_ojbText = []
         repeat_text=[]
+        video_segments = []
+        
         # Xử lý các timestamp
         for i in range(0, len(framHaveText), 2):
             # Lấy khoảng silence
@@ -70,19 +88,26 @@ def convert_json_to_audio(json_file_path, output_file="output.mp3"):
             data_text_performent = text_performent(data, silence_start, silence_end)
             if i >0 :
                 repeat_text = [item for item in data_text_performent if item["from"] == last_ojbText[0]["from"]]
+                if repeat_text:
+                    continue
             last_ojbText = data_text_performent
-            if data_text_performent and repeat_text == []:
-                 # Tính khoảng silence trước mỗi đoạn thoại
+            if data_text_performent :
+                #  Tính khoảng silence trước mỗi đoạn thoại
                 if silence_start * 1000 > lenaudio_segments:
                     silence_duration = max(0, int((silence_start * 1000 - lenaudio_segments) ))
                     silence = AudioSegment.silent(duration=silence_duration)
                     audio_segments.append(silence)
-                    lenaudio_segments += silence_duration  
+                    lenaudio_segments += silence_duration
+                      
+                    # short_v =add_and_blur_text("",silence_start,framHaveText[i - 1]["timestamp"]) 
+                    # video_segments.append(short_v)
                 elif silence_start * 1000 < lenaudio_segments:
                     silence = AudioSegment.silent(duration=0)
                     audio_segments.append(silence)    
                 for ts in data_text_performent:
                     # Chuyển đổi text thành audio
+                    short_v =add_and_blur_text(ts["content"],ts["from"],ts["to"])
+                    video_segments.append(short_v)
                     audio = convert_text_to_audio(ts["content"])
                     
                     # Kiểm tra và điều chỉnh tốc độ nếu cần
@@ -94,13 +119,24 @@ def convert_json_to_audio(json_file_path, output_file="output.mp3"):
 
         # Kết hợp và xuất audio
         final_audio = sum(audio_segments, AudioSegment.silent(duration=0))
+        
         final_audio.export(output_file, format="mp3")
+                # Kết hợp video
+        if video_segments:
+            final_video = CompositeVideoClip(video_segments,size=VideoFileClip(video_path).size)
+            final_video.write_videofile("C:/Users/pc/toolPy/result.mp4", codec="h264_nvenc", fps=video.fps, remove_temp=True,
+        ffmpeg_params=[
+            "-preset", "fast",  
+            "-b:v", "6000k"  
+        ])
+
+        
         return output_file
     
     except Exception as e:
         logging.error(f"Error converting to audio: {e}")
         raise
-
+convert_json_to_audio("C:/Users/pc/toolPy/functions/subtitlesViet.json")
 
 
 

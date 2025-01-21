@@ -4,8 +4,6 @@ import Get_Sub_bilibili
 import downloadVideo
 import sys
 sys.path.append("C:/Users/pc/toolPy/functions")
-import image__to__text as image__to__text
-import text__to_radio as text__to_radio
 import os
 
 
@@ -42,7 +40,6 @@ class TranslationApp:
         # Add translation logic here
         downloadVideo.downloadAudio(url)
         Get_Sub_bilibili.getSub(api_url=authen__key,video_id=url)
-        # text__to_radio.convert_json_to_audio(f"{_path}/functions/subtitlesViet.json", output_file="output.mp3")     
 def main():
     root = tk.Tk()
     app = TranslationApp(root)
