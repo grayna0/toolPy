@@ -5,7 +5,6 @@ import downloadVideo
 import sys
 sys.path.append("C:/Users/pc/toolPy/functions")
 import os
-import text__to_radio
 
 _path = os.path.dirname(os.path.abspath("functions"))
 
@@ -32,8 +31,7 @@ class TranslationApp:
         # Button
         ttk.Button(main_frame, text="Dowload", 
                   command=self.start_download).grid(row=2, column=1, pady=20)
-        ttk.Button(main_frame, text="conver text to audio", 
-                  command=self.conver_audio).grid(row=2, column=1, pady=20)
+
       
     def start_download(self):
         authen__key = self.key_input.get()
@@ -41,8 +39,8 @@ class TranslationApp:
         # Add translation logic here
         downloadVideo.downloadAudio(url)
         Get_Sub_bilibili.getSub(api_url=authen__key,video_id=url)
-    def conver_audio():
-        text__to_radio.convert_json_to_audio("C:/Users/pc/toolPy/functions/subtitlesViet.json")
+    # def conver_audio():
+    #     handle_conver.convert_json_to_audio("C:/Users/pc/toolPy/functions/subtitlesViet.json")
 def main():
     root = tk.Tk()
     app = TranslationApp(root)

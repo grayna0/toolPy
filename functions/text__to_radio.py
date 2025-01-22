@@ -10,20 +10,22 @@ sys.path.append("C:/Users/pc/toolPy/functions")
 import image__to__text as image__to__text
 from moviepy import TextClip,VideoFileClip,CompositeVideoClip
 
+_path = os.path.dirname(os.path.abspath("functions"))
+video_path= f"{_path}/file_0.mp4"
 
-video_path= "C:/Users/pc/toolPy/file_0.mp4"
 # Đường dẫn FFmpeg hỗ trợ CUDA
 ffmpeg_cuda_path = "D:/ffmpeg-2024-12-23-git-6c9218d748-full_build/bin/ffmpeg"
-video = VideoFileClip(video_path)
-def add_and_blur_text(data_text,start,end):
+def add_and_blur_text(data_text,start,end,index):
     # video_short= video[start:end]
+    video_p= f"{_path}/file_{index}.mp4"
+    video = VideoFileClip(video_p)
     text = TextClip(text=data_text,
     font="tahoma.ttf",
     font_size=20,
     color='black',
     bg_color="white",
     duration=end-start,
-    size=(video.size[0] - 300, None)).with_start(start).with_position("bottom")
+    size=(video.size[0], None)).with_start(start).with_position("bottom")
     return CompositeVideoClip([video, text])
 
 def convert_text_to_audio(text, lang='vi',speed=200):
@@ -47,16 +49,23 @@ def convert_text_to_audio(text, lang='vi',speed=200):
         os.remove(temp_file)
         return audio
     # Read JSON
+    
+    
 def text_performent(data,silence_start,silence_end):
-    relevant_timestamps = [
+    front_timestamps = [item for item in data["body"]
+        if silence_end <= item["to"] and  item["from"] >= silence_start]
+    front_relevant_timestamps = [
         item for item in data["body"]
-        if silence_end >= item["from"] and  item["from"] >= silence_start
+        if silence_end >= item["to"] and  item["from"] >= silence_start
         ]
     inside_timestamps = [
         item for item in data["body"]
         if silence_end <= item["to"] and  item["from"] <= silence_start
         ]
-  
+    behide_timestamps = [
+        item for item in data["body"]
+        if silence_end >= item["to"] and  item["to"] >= silence_start
+        ]
     if  relevant_timestamps :
         return relevant_timestamps
     elif  relevant_timestamps == [] and inside_timestamps:
@@ -77,7 +86,7 @@ def convert_json_to_audio(json_file_path, output_file="output.mp3"):
         last_ojbText = []
         repeat_text=[]
         video_segments = []
-        
+        index=0
         # Xử lý các timestamp
         for i in range(0, len(framHaveText), 2):
             # Lấy khoảng silence
@@ -105,12 +114,22 @@ def convert_json_to_audio(json_file_path, output_file="output.mp3"):
                     silence = AudioSegment.silent(duration=0)
                     audio_segments.append(silence)    
                 for ts in data_text_performent:
-                    # Chuyển đổi text thành audio
-                    short_v =add_and_blur_text(ts["content"],ts["from"],ts["to"])
-                    video_segments.append(short_v)
-                    audio = convert_text_to_audio(ts["content"])
                     
+                    # Chuyển đổi text thành audio
+                    short_v =add_and_blur_text(ts["content"],ts["from"],ts["to"],index)
+                    # video_segments.append(short_v)
+                    audio = convert_text_to_audio(ts["content"])
+                    index += 1
+                    if index > 3:
+                        
+                     os.remove(f"{_path}/file_{index - 2}.mp4")
                     # Kiểm tra và điều chỉnh tốc độ nếu cần
+                    
+                    short_v.write_videofile(f"{_path}/file_{index}.mp4", codec="h264_nvenc", fps=VideoFileClip(video_path).fps, remove_temp=True,
+                    ffmpeg_params=[
+                        "-preset", "fast",  
+                        "-b:v", "6000k"  
+                    ])
                     if len(audio) > 100 :
                         audio_segments.append(audio)
                         lenaudio_segments += len(audio)
@@ -122,13 +141,6 @@ def convert_json_to_audio(json_file_path, output_file="output.mp3"):
         
         final_audio.export(output_file, format="mp3")
                 # Kết hợp video
-        if video_segments:
-            final_video = CompositeVideoClip(video_segments,size=VideoFileClip(video_path).size)
-            final_video.write_videofile("C:/Users/pc/toolPy/result.mp4", codec="h264_nvenc", fps=video.fps, remove_temp=True,
-        ffmpeg_params=[
-            "-preset", "fast",  
-            "-b:v", "6000k"  
-        ])
 
         
         return output_file
@@ -136,9 +148,8 @@ def convert_json_to_audio(json_file_path, output_file="output.mp3"):
     except Exception as e:
         logging.error(f"Error converting to audio: {e}")
         raise
+
 convert_json_to_audio("C:/Users/pc/toolPy/functions/subtitlesViet.json")
-
-
 
 
     
