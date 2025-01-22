@@ -5,12 +5,11 @@ import downloadVideo
 import sys
 sys.path.append("C:/Users/pc/toolPy/functions")
 import os
-
+import text__to_radio
 
 _path = os.path.dirname(os.path.abspath("functions"))
 
-def translateFn():
-    print("translatsse")
+
 class TranslationApp:
     def __init__(self, root):
         self.root = root
@@ -31,15 +30,19 @@ class TranslationApp:
         self.key_input.grid(row=1, column=1, padx=5, pady=5)
         
         # Button
-        ttk.Button(main_frame, text="Translate", 
-                  command=self.start_translation).grid(row=2, column=1, pady=20)
+        ttk.Button(main_frame, text="Dowload", 
+                  command=self.start_download).grid(row=2, column=1, pady=20)
+        ttk.Button(main_frame, text="conver text to audio", 
+                  command=self.conver_audio).grid(row=2, column=1, pady=20)
       
-    def start_translation(self):
+    def start_download(self):
         authen__key = self.key_input.get()
         url = self.url_input.get()
         # Add translation logic here
         downloadVideo.downloadAudio(url)
         Get_Sub_bilibili.getSub(api_url=authen__key,video_id=url)
+    def conver_audio():
+        text__to_radio.convert_json_to_audio("C:/Users/pc/toolPy/functions/subtitlesViet.json")
 def main():
     root = tk.Tk()
     app = TranslationApp(root)
