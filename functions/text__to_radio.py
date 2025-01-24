@@ -52,24 +52,46 @@ def convert_text_to_audio(text, lang='vi',speed=200):
     
     
 def text_performent(data,silence_start,silence_end):
-    front_timestamps = [item for item in data["body"]
-        if silence_end <= item["to"] and  item["from"] >= silence_start]
-    front_relevant_timestamps = [
-        item for item in data["body"]
-        if silence_end >= item["to"] and  item["from"] >= silence_start
-        ]
-    inside_timestamps = [
-        item for item in data["body"]
-        if silence_end <= item["to"] and  item["from"] <= silence_start
-        ]
-    behide_timestamps = [
-        item for item in data["body"]
-        if silence_end >= item["to"] and  item["to"] >= silence_start
-        ]
-    if  relevant_timestamps :
-        return relevant_timestamps
-    elif  relevant_timestamps == [] and inside_timestamps:
-        return inside_timestamps
+    # front_timestamps = [item for item in data["body"]
+    #     if silence_end <= item["to"] and  item["from"] >= silence_start]
+    # front_relevant_timestamps = [
+    #     item for item in data["body"]
+    #     if silence_end >= item["to"] and  item["from"] >= silence_start
+    #     ]
+    # inside_timestamps = [
+    #     item for item in data["body"]
+    #     if silence_end <= item["to"] and  item["from"] <= silence_start
+    #     ]
+    # behide_timestamps = [
+    #     item for item in data["body"]
+    #     if silence_end >= item["to"] and  item["to"] >= silence_start
+    #     ]
+    # relevant_timestamps = [
+    #     item for item in data["body"]
+    #     if silence_end >= item["from"] and  item["from"] >= silence_start
+    #     ]
+    # inside_timestamps = [
+    #     item for item in data["body"]
+    #     if silence_end <= item["to"] and  item["from"] <= silence_start
+    #     ]
+
+    # if  relevant_timestamps :
+    #     return relevant_timestamps
+    # elif  relevant_timestamps == [] and inside_timestamps:
+    #     return inside_timestamps
+    arr=[]
+    for item in data["body"]  :
+        if item["from"] >= silence_start :
+            if item["to"]   >= silence_end:
+                      arr.append(item)
+            elif item["to"]   <= silence_end:
+                     arr.append(item)
+        elif item["from"] <= silence_start :
+            if item["to"]   >= silence_end:
+                      arr.append(item)
+            if item["to"]   <= silence_end:
+                    arr.append(item)
+    return arr
   
     
 def convert_json_to_audio(json_file_path, output_file="output.mp3"):
@@ -107,29 +129,15 @@ def convert_json_to_audio(json_file_path, output_file="output.mp3"):
                     silence = AudioSegment.silent(duration=silence_duration)
                     audio_segments.append(silence)
                     lenaudio_segments += silence_duration
-                      
-                    # short_v =add_and_blur_text("",silence_start,framHaveText[i - 1]["timestamp"]) 
-                    # video_segments.append(short_v)
+              
                 elif silence_start * 1000 < lenaudio_segments:
                     silence = AudioSegment.silent(duration=0)
                     audio_segments.append(silence)    
                 for ts in data_text_performent:
-                    
-                    # Chuyển đổi text thành audio
-                    short_v =add_and_blur_text(ts["content"],ts["from"],ts["to"],index)
-                    # video_segments.append(short_v)
+            
                     audio = convert_text_to_audio(ts["content"])
                     index += 1
-                    if index > 3:
-                        
-                     os.remove(f"{_path}/file_{index - 2}.mp4")
-                    # Kiểm tra và điều chỉnh tốc độ nếu cần
-                    
-                    short_v.write_videofile(f"{_path}/file_{index}.mp4", codec="h264_nvenc", fps=VideoFileClip(video_path).fps, remove_temp=True,
-                    ffmpeg_params=[
-                        "-preset", "fast",  
-                        "-b:v", "6000k"  
-                    ])
+                  
                     if len(audio) > 100 :
                         audio_segments.append(audio)
                         lenaudio_segments += len(audio)
