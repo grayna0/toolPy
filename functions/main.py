@@ -3,7 +3,8 @@ from tkinter import ttk
 import Get_Sub_bilibili
 import downloadVideo
 import sys
-sys.path.append("C:/Users/pc/toolPy/functions")
+from user_path import userPath 
+sys.path.append(userPath)
 import os
 
 _path = os.path.dirname(os.path.abspath("functions"))

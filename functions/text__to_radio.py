@@ -5,29 +5,35 @@ from pydub import AudioSegment
 import os
 import logging
 from pyttsx3 import init as pyttsx3_init
+from user_path import  userPath,proxy_path,ffmpge_path
 import sys
-sys.path.append("C:/Users/pc/toolPy/functions")
+sys.path.append(userPath)
 import image__to__text as image__to__text
 from moviepy import TextClip,VideoFileClip,CompositeVideoClip
-
 _path = os.path.dirname(os.path.abspath("functions"))
-video_path= f"{_path}/file_0.mp4"
 
+
+
+
+video_path= f"{_path}/file_1.mp4"
 # Đường dẫn FFmpeg hỗ trợ CUDA
-ffmpeg_cuda_path = "D:/ffmpeg-2024-12-23-git-6c9218d748-full_build/bin/ffmpeg"
-def add_and_blur_text(data_text,start,end,index):
-    # video_short= video[start:end]
-    video_p= f"{_path}/file_{index}.mp4"
-    video = VideoFileClip(video_p)
-    text = TextClip(text=data_text,
-    font="tahoma.ttf",
-    font_size=20,
-    color='black',
-    bg_color="white",
-    duration=end-start,
-    size=(video.size[0], None)).with_start(start).with_position("bottom")
-    return CompositeVideoClip([video, text])
+ffmpeg_cuda_path = ffmpge_path
+# def add_and_blur_text(data_text,start,end,index):
+#     # video_short= video[start:end]
+#     video_p= f"{_path}/file_{index}.mp4"
+#     video = VideoFileClip(video_p)
+#     text = TextClip(text=data_text,
+#     font="tahoma.ttf",
+#     font_size=20,
+#     color='black',
+#     bg_color="white",
+#     duration=end-start,
+#     size=(video.size[0], None)).with_start(start).with_position("bottom")
+#     return CompositeVideoClip([video, text])
 
+# speed uop audio
+def change_audio_speed(audio, speed_factor=1.3):
+    return audio.speedup(playback_speed=speed_factor)
 def convert_text_to_audio(text, lang='vi',speed=200):
     try:
         # Primary method - pyttsx3
@@ -39,8 +45,10 @@ def convert_text_to_audio(text, lang='vi',speed=200):
         
         audio = AudioSegment.from_mp3(temp_file)
         os.remove(temp_file)
-        return audio
-    except:
+        speed_factor = speed / 150.0  # 150 là tốc độ chuẩn 1.0x
+        faster_audio = change_audio_speed(audio, speed_factor)
+        return faster_audio
+    except Exception as e:
         # Fallback to gTTS
         tts = gTTS(text=text, lang=lang)
         tts.save(temp_file)
@@ -110,7 +118,7 @@ def convert_json_to_audio(json_file_path, output_file="output.mp3"):
         video_segments = []
         index=0
         # Xử lý các timestamp
-        for i in range(0, len(framHaveText), 2):
+        for i in range(0, len(framHaveText[:-1]), 2):
             # Lấy khoảng silence
             silence_start = framHaveText[i]["timestamp"]
             silence_end = framHaveText[i + 1]["timestamp"]
@@ -157,7 +165,7 @@ def convert_json_to_audio(json_file_path, output_file="output.mp3"):
         logging.error(f"Error converting to audio: {e}")
         raise
 
-convert_json_to_audio("C:/Users/pc/toolPy/functions/subtitlesViet.json")
+convert_json_to_audio("C:/Users/grayn/toolPy/functions/subtitlesViet.json")
 
 
     

@@ -8,15 +8,12 @@ import apiUrl
 import speech_recognition as sr
 # Đường dẫn đến thư mục chứa BrowserMob Proxy
 import os
+
+from user_path import userPath, proxy_path
+
 def downloadAudio(Url_video):
-    _path = os.path.dirname(os.path.abspath("functions"))  # Lấy đường dẫn tuyệt đối đến "Login"
-    # Đường dẫn gốc: Thư mục hiện tại
-    # base_dir = os.path.dirname(os.path.abspath(__file__))
-
-    # Đường dẫn đến thư mục
-    # proxy_path = os.path.join(base_dir, "source", "browsermob-proxy-2.1.4-bin/browsermob-proxy-2.1./bin/browsermob-proxy")
-    browsermob_proxy_path = "C:/Users/pc/toolPy/functions/source/browsermob-proxy-2.1.4-bin/browsermob-proxy-2.1.4/bin/browsermob-proxy.bat"
-
+    _path = os.path.dirname(os.path.abspath("functions"))  # Lấy đường dẫn tuyệt đối đến 
+    browsermob_proxy_path = proxy_path
     # Khởi động BrowserMob Proxy server
     server = Server(browsermob_proxy_path)
     server.start()

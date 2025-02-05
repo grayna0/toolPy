@@ -15,10 +15,10 @@ from multiprocessing import Pool, cpu_count
 import torch
 import gc
 import os
-import write_sub_to_json
+from user_path import userPath ,path_video
+
 _path = os.path.dirname(os.path.abspath("functions"))
-video_path = f"C:/Users/pc/toolPy/file_0.mp4"
-print(video_path)
+video_path = f"{path_video}/file_1.mp4"
 
 # Cache EasyOCR reader instance
 @lru_cache(maxsize=1)
@@ -28,6 +28,9 @@ def get_reader():
 def clear_gpu_memory():
     torch.cuda.empty_cache()
     gc.collect()
+    
+    
+# crop image width=100 and height=65
 
 def crop__image_fromVideo(video_path, interval=0.5):
     cap = cv2.VideoCapture(video_path)
@@ -49,7 +52,7 @@ def crop__image_fromVideo(video_path, interval=0.5):
             img_h, img_w = frame.shape[:2]
             half_width = img_w // 2
             crop = frame[img_h - 80:img_h - 15, half_width - 50: half_width + 50]
-
+            
             output_path = f"{_path}/functions/AUDIOVIET/frame_{timestamp}.png"
             cv2.imwrite(output_path, crop)
 
@@ -57,32 +60,6 @@ def crop__image_fromVideo(video_path, interval=0.5):
 
     cap.release()
     return timestampArr
-# ################################
-# def process_frame_with_retry(frame_path, retries=3):
-#     reader = get_reader()
-#     for attempt in range(retries):
-#         try:
-#             frame = cv2.imread(frame_path)
-#             if frame is None:
-#                 return None
-#             return reader.readtext(frame, detail=0)
-#         except Exception as e:
-#             print(f"Retry {attempt + 1} for {frame_path} due to error: {e}")
-#             clear_gpu_memory()
-#     return None  # Trả về None nếu hết retry
-
-# def process_frames_parallel(timestampArr):
-#     frame_paths = [f"{_path}/functions/AUDIOVIET/frame_{ts}.png" for ts in timestampArr]
-#     with Pool(cpu_count()) as pool:
-#         results = list(tqdm(pool.imap(process_frame_with_retry, frame_paths), total=len(frame_paths)))
-
-#     processed_results = []
-#     for i, text_result in enumerate(results):
-#         if text_result:
-#             processed_results.append({'timestamp': timestampArr[i], 'text': text_result})
-#     return processed_results
-
-# ################################
 
 def check_text_in_frames():
     clear_gpu_memory()
@@ -100,8 +77,11 @@ def check_text_in_frames():
                 continue
                 
             # Process image
-            text_results = reader.readtext(frame,detail=0,batch_size=8)
-          
+            text_results = reader.readtext(frame_path,batch_size=8,detail=0)
+            # if text_results:
+            #     x_min, y_min = text_results[0][0][0][0], text_results[0][0][0][1]
+            #     x_max, y_max = text_results[0][0][2][0], text_results[0][0][2][1]
+            #     text_final=crop_image_again(x_min, y_min, x_max, y_max,frame_path)
             results.append({
                     'timestamp': timestamp,
                     'text': text_results
@@ -111,7 +91,7 @@ def check_text_in_frames():
             # Clear GPU memory periodically
             if len(results) % 10 == 0:
                 clear_gpu_memory()
-    
+        print(results)
     except Exception as e:
         print(f"Error processing frames: {e}")
         
@@ -124,23 +104,20 @@ def removeImage():
 def handle_timestamp():
     results = check_text_in_frames()
     filtered_results = []
-    # for index ,frame in enumerate(results -1):
+    for index ,frame in enumerate(results[:-1]):
         
-    #     next_text = results[index + 1]["text"] 
+        next_text = results[index + 1]["text"] 
         
-    #     if len(frame["text"]) > 0 and len(next_text) == 0  :
-    #         print("none",frame)
-    #         filtered_results.append(frame)
-    #     if len(frame["text"]) == 0  and len(next_text) > 0:
-    #         print("TẼTXT",frame)
-            
-    #         filtered_results.append(results[index + 1])
-    for i, frame in enumerate(results[:-1]):  # Duyệt qua các frame trừ frame cuối
-        next_text = results[i + 1]["text"]
-        if frame["text"] != "" and next_text == "" or []:  # Text biến mất
+        if len(frame["text"]) > 0 and len(next_text) == 0  :
             filtered_results.append(frame)
-        elif frame["text"] == "" or [] and next_text != "":  # Text xuất hiện
-            filtered_results.append(results[i + 1])
+        if len(frame["text"]) == 0  and len(next_text) > 0:
+            filtered_results.append(results[index + 1])
+    # for i, frame in enumerate(results[:-1]):  # Duyệt qua các frame trừ frame cuối
+    #     next_text = results[i + 1]["text"]
+    #     if frame["text"] != "" and next_text == "" or []:  # Text biến mất
+    #         filtered_results.append(frame)
+    #     elif frame["text"] == "" or [] and next_text != "":  # Text xuất hiện
+    #         filtered_results.append(results[i + 1])
        
 
     # removeImage()
@@ -156,4 +133,3 @@ def handle_video_processing():
         print(11)
         # removeImage()  # Đảm bảo xóa ảnh tạm dù xảy ra lỗi
 
-result = handle_video_processing()
