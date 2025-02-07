@@ -18,7 +18,7 @@ import os
 from user_path import userPath ,path_video
 
 _path = os.path.dirname(os.path.abspath("functions"))
-video_path = f"{path_video}/file_1.mp4"
+video_path = f"{path_video}/file_0.mp4"
 
 # Cache EasyOCR reader instance
 @lru_cache(maxsize=1)
@@ -32,22 +32,25 @@ def clear_gpu_memory():
     
 # crop image width=100 and height=65
 
-def crop__image_fromVideo(video_path, interval=0.5):
+def crop__image_fromVideo(video_path):
     cap = cv2.VideoCapture(video_path)
+    
+    # Get video properties
     fps = cap.get(cv2.CAP_PROP_FPS)
-    frame_interval = int(fps * interval)  # Lấy frame mỗi 'interval' giây
-    timestampArr = []
-    frame_count = 0
-
+    timestampArr =[]
     while cap.isOpened():
         ret, frame = cap.read()
         if not ret:
             break
-
-        if frame_count % frame_interval == 0:  # Chỉ xử lý frame theo interval
-            timestamp = round(frame_count / fps, 2)
+            
+        # Get current frame position
+        frame_pos = cap.get(cv2.CAP_PROP_POS_FRAMES)
+        # Calculate timestamp in seconds
+        timestamp = round(frame_pos / fps,2)
+        int_timestamp = int(timestamp)
+        if isinstance(int_timestamp,int)  :
             timestampArr.append(timestamp)
-
+    
             # Crop vùng cần thiết
             img_h, img_w = frame.shape[:2]
             half_width = img_w // 2
@@ -56,7 +59,7 @@ def crop__image_fromVideo(video_path, interval=0.5):
             output_path = f"{_path}/functions/AUDIOVIET/frame_{timestamp}.png"
             cv2.imwrite(output_path, crop)
 
-        frame_count += 1
+        # frame_count += 1
 
     cap.release()
     return timestampArr
@@ -78,10 +81,7 @@ def check_text_in_frames():
                 
             # Process image
             text_results = reader.readtext(frame_path,batch_size=8,detail=0)
-            # if text_results:
-            #     x_min, y_min = text_results[0][0][0][0], text_results[0][0][0][1]
-            #     x_max, y_max = text_results[0][0][2][0], text_results[0][0][2][1]
-            #     text_final=crop_image_again(x_min, y_min, x_max, y_max,frame_path)
+
             results.append({
                     'timestamp': timestamp,
                     'text': text_results
@@ -91,7 +91,6 @@ def check_text_in_frames():
             # Clear GPU memory periodically
             if len(results) % 10 == 0:
                 clear_gpu_memory()
-        print(results)
     except Exception as e:
         print(f"Error processing frames: {e}")
         
@@ -112,24 +111,8 @@ def handle_timestamp():
             filtered_results.append(frame)
         if len(frame["text"]) == 0  and len(next_text) > 0:
             filtered_results.append(results[index + 1])
-    # for i, frame in enumerate(results[:-1]):  # Duyệt qua các frame trừ frame cuối
-    #     next_text = results[i + 1]["text"]
-    #     if frame["text"] != "" and next_text == "" or []:  # Text biến mất
-    #         filtered_results.append(frame)
-    #     elif frame["text"] == "" or [] and next_text != "":  # Text xuất hiện
-    #         filtered_results.append(results[i + 1])
+
        
 
-    # removeImage()
+    removeImage()
     return filtered_results
-def handle_video_processing():
-    try:
-        results = handle_timestamp()
-        for result in results:
-            print(result["timestamp"], result["text"])
-    except Exception as e:
-        print(f"Error in processing video: {e}")
-    finally:
-        print(11)
-        # removeImage()  # Đảm bảo xóa ảnh tạm dù xảy ra lỗi
-
